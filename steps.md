@@ -46,5 +46,18 @@ gph
 # https://github.com/KostiantynO/t3gallery.git
 # * [new branch]      HEAD -> main
 # Branch 'main' set up to track remote branch 'main' from 'origin'.
+code ~/.bash_profile
+  alias pd="pnpm dev"
+source ~/.bash_profile
 
+git rm --cached pnpm-lock.yaml
+
+
+```
+
+`.eslintrc.cjs`
+
+```jsonc
+// https://typescript-eslint.io/rules/consistent-type-imports/
+{ "fixStyle": "separate-type-imports" }
 ```

@@ -1,9 +1,7 @@
-const HomePage = () => {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-      Hello (gallery in progress)
-    </main>
-  );
-};
+const HomePage = () => (
+  <main className="mx-auto flex min-h-screen max-w-3xl flex-col items-center">
+    Hello World!
+  </main>
+);
 
 export default HomePage;
