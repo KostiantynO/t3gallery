@@ -52,6 +52,7 @@ source ~/.bash_profile
 
 git rm --cached pnpm-lock.yaml
 
+pa @vercel/postgres
 
 ```
 
@@ -60,4 +61,11 @@ git rm --cached pnpm-lock.yaml
 ```jsonc
 // https://typescript-eslint.io/rules/consistent-type-imports/
 { "fixStyle": "separate-type-imports" }
+```
+
+[`Vercel`](https://vercel.com/)
+
+```bash
+Function region # Frankfurt, Germany (West) – fra1
+PG DB (Neon) # Frankfurt, Germany - (fra1)
 ```
