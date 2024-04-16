@@ -1,3 +1,5 @@
+import { SignedIn, SignedOut } from '@clerk/nextjs';
+
 import { db } from '~/server/db';
 
 const getImages = async () =>
@@ -5,7 +7,7 @@ const getImages = async () =>
     orderBy: ({ id }, { desc }) => desc(id),
   });
 
-const HomePage = async () => {
+const Gallery = async () => {
   const images = await getImages();
 
   const gallery = images.map(({ id, url, name }) => (
@@ -15,11 +17,19 @@ const HomePage = async () => {
     </li>
   ));
 
-  return (
-    <main className="mx-auto flex min-h-screen max-w-5xl flex-col items-center px-8">
-      <ul className="grid grid-cols-3 gap-4">{gallery}</ul>
-    </main>
-  );
+  return <ul className="grid grid-cols-3 gap-4">{gallery}</ul>;
 };
 
-export default HomePage;
+const GalleryPage = async () => (
+  <main className="mx-auto flex min-h-screen max-w-5xl flex-col items-center px-8">
+    <SignedOut>
+      <p className="h-full w-full text-center text-2xl">Please sign in above</p>
+    </SignedOut>
+
+    <SignedIn>
+      <Gallery />
+    </SignedIn>
+  </main>
+);
+
+export default GalleryPage;

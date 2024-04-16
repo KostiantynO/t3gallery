@@ -49,8 +49,9 @@ Follow our deployment guides for
 - [x] Tidy up build process
 - [x] Add `DB` (Vercel Postgres)
 - [x] Attach DB to UI
-- [ ] Add `auth` (Clerk)
+- [x] Add `auth` (Clerk)
 - [ ] Add `image upload`
+- [ ] Add `taint` (server-only)
 - [ ] Add `error management` (Sentry)
 - [ ] Add `routing`/`Image page` (parallel route)
 - [ ] Add `Delete button` (Server Actions)
