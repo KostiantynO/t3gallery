@@ -47,8 +47,8 @@ Follow our deployment guides for
 - [x] `Deploy` it (Vercel)
 - [x] Add `UI` + `mock data`
 - [x] Tidy up build process
-- [ ] Add `DB` (Vercel Postgres)
-- [ ] Attach DB to UI
+- [x] Add `DB` (Vercel Postgres)
+- [x] Attach DB to UI
 - [ ] Add `auth` (Clerk)
 - [ ] Add `image upload`
 - [ ] Add `error management` (Sentry)

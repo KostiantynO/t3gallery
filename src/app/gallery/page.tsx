@@ -1,26 +1,19 @@
-import { useMemo } from 'react';
+import { db } from '~/server/db';
 
-const mockUrls = [
-  'https://utfs.io/f/dad74ce1-c8e8-46d8-8318-748a8afbb0fd-oprazk.webp',
-  'https://utfs.io/f/3c86d1fd-67f0-4e55-b15a-98321c333654-vh5ts1.webp',
-  'https://utfs.io/f/075380ca-5944-4982-a6bb-2022bc778ffb-hycs73.webp',
-];
+const getImages = async () =>
+  await db.query.images.findMany({
+    orderBy: ({ id }, { desc }) => desc(id),
+  });
 
-const mockImages = [...mockUrls, ...mockUrls, ...mockUrls].map((url, idx) => ({
-  id: idx + 1,
-  url,
-}));
+const HomePage = async () => {
+  const images = await getImages();
 
-const HomePage = () => {
-  const gallery = useMemo(
-    () =>
-      mockImages.map(({ id, url }) => (
-        <li key={id}>
-          <img src={url} alt="activity" />
-        </li>
-      )),
-    []
-  );
+  const gallery = images.map(({ id, url, name }) => (
+    <li key={id}>
+      <img src={url} alt={name} />
+      <span>{name}</span>
+    </li>
+  ));
 
   return (
     <main className="mx-auto flex min-h-screen max-w-5xl flex-col items-center px-8">
