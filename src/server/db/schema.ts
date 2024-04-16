@@ -16,9 +16,9 @@ import {
  *
  * @see https://orm.drizzle.team/docs/goodies#multi-project-schema
  */
-export const createTable = pgTableCreator(name => `t3gallery_${name}`);
+const createTable = pgTableCreator(name => `t3gallery_${name}`);
 
-export const images = createTable(
+const images = createTable(
   'image',
   {
     id: serial('id').primaryKey(),
@@ -33,3 +33,5 @@ export const images = createTable(
     nameIndex: index('name_idx').on(example.name),
   })
 );
+
+export const schema = { createTable, images };

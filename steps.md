@@ -53,7 +53,7 @@ source ~/.bash_profile
 git rm --cached pnpm-lock.yaml
 
 pa @vercel/postgres
-
+pa @clerk/nextjs@beta
 ```
 
 `.eslintrc.cjs`
