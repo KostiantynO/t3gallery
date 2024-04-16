@@ -1,5 +1,7 @@
 import { db } from '~/server/db';
 
+export const dynamic = 'force-dynamic';
+
 const getPosts = async () => await db.query.posts.findMany();
 
 const HomePage = async () => {
