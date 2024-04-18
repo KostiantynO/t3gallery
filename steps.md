@@ -57,6 +57,10 @@ pa @clerk/nextjs@beta
 pa uploadthing @uploadthing/react
 pa server-only
 
+pa @sentry/wizard@latest
+pnpm list --depth 0
+# pnpm exec -- @sentry/wizard nextjs # wrong
+pnpm run sentry-wizard nextjs
 ```
 
 `.eslintrc.cjs`
