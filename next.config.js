@@ -8,6 +8,9 @@ await import('./src/env.js');
 const nextConfig = {
   typescript: { ignoreBuildErrors: true },
   eslint: { ignoreDuringBuilds: true },
+  images: {
+    remotePatterns: [{ hostname: 'utfs.io', protocol: 'https' }],
+  },
 };
 
 export default nextConfig;

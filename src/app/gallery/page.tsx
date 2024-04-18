@@ -1,4 +1,5 @@
 import { SignedIn, SignedOut } from '@clerk/nextjs';
+import Image from 'next/image';
 
 import { getMyImages } from '~/server/queries';
 
@@ -6,13 +7,13 @@ const Gallery = async () => {
   const images = await getMyImages();
 
   const gallery = images.map(({ id, url, name }) => (
-    <li key={id}>
-      <img src={url} alt={name} />
+    <li key={id} className="h-48 w-48">
+      <Image src={url} alt={name} width={192} height={192} />
       <span>{name}</span>
     </li>
   ));
 
-  return <ul className="grid grid-cols-3 gap-4">{gallery}</ul>;
+  return <ul className="grid auto-cols-auto grid-cols-3 gap-4">{gallery}</ul>;
 };
 
 const GalleryPage = async () => (

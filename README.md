@@ -49,8 +49,8 @@ Follow our deployment guides for
 - [x] Attach DB to UI
 - [x] Add `auth` (Clerk)
 - [x] Add `image upload`
-- [ ] Add `taint` (server-only)
-- [ ] Use Next/`Image` component
+- [x] Add `taint` (server-only)
+- [x] Use Next/`Image` component
 - [ ] Add `error management` (Sentry)
 - [ ] Add `routing`/`Image page` (parallel route)
 - [ ] Add `Delete button` (Server Actions)
