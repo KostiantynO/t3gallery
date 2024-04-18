@@ -1,14 +1,9 @@
 import { SignedIn, SignedOut } from '@clerk/nextjs';
 
-import { db } from '~/server/db';
-
-const getImages = async () =>
-  await db.query.images.findMany({
-    orderBy: ({ id }, { desc }) => desc(id),
-  });
+import { getMyImages } from '~/server/queries';
 
 const Gallery = async () => {
-  const images = await getImages();
+  const images = await getMyImages();
 
   const gallery = images.map(({ id, url, name }) => (
     <li key={id}>

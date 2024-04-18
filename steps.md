@@ -55,6 +55,8 @@ git rm --cached pnpm-lock.yaml
 pa @vercel/postgres
 pa @clerk/nextjs@beta
 pa uploadthing @uploadthing/react
+pa server-only
+
 ```
 
 `.eslintrc.cjs`
