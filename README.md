@@ -1,4 +1,4 @@
-# Create T3 App
+# T3 Gallery (based on Create T3 App)
 
 This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with
 `create-t3-app`.
@@ -40,8 +40,6 @@ Follow our deployment guides for
 [Netlify](https://create.t3.gg/en/deployment/netlify) and
 [Docker](https://create.t3.gg/en/deployment/docker) for more information.
 
-# T3 Gallery
-
 ## TODO
 
 - [x] `Deploy` it (Vercel)
@@ -50,8 +48,9 @@ Follow our deployment guides for
 - [x] Add `DB` (Vercel Postgres)
 - [x] Attach DB to UI
 - [x] Add `auth` (Clerk)
-- [ ] Add `image upload`
+- [x] Add `image upload`
 - [ ] Add `taint` (server-only)
+- [ ] Use Next/`Image` component
 - [ ] Add `error management` (Sentry)
 - [ ] Add `routing`/`Image page` (parallel route)
 - [ ] Add `Delete button` (Server Actions)
