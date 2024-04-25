@@ -15,11 +15,12 @@ export const metadata = {
 
 interface RootLayoutProps {
   children: ReactNode;
+  modal: ReactNode;
 }
 
-const RootLayout = ({ children }: RootLayoutProps) => (
+const RootLayout = ({ children, modal }: RootLayoutProps) => (
   <ClerkProvider>
-    <App>{children}</App>
+    <App modal={modal}>{children}</App>
   </ClerkProvider>
 );
 

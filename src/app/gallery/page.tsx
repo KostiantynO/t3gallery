@@ -1,5 +1,6 @@
 import { SignedIn, SignedOut } from '@clerk/nextjs';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { getMyImages } from '~/server/queries';
 
@@ -8,8 +9,10 @@ const Gallery = async () => {
 
   const gallery = images.map(({ id, url, name }) => (
     <li key={id} className="h-48 w-48">
-      <Image src={url} alt={name} width={192} height={192} />
-      <span>{name}</span>
+      <Link href={`/img/${id}`}>
+        <Image src={url} alt={name} width={192} height={192} />
+        <span>{name}</span>
+      </Link>
     </li>
   ));
 

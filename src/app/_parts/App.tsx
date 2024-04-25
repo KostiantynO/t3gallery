@@ -16,12 +16,13 @@ const { variable: font } = inter;
 
 interface AppProps {
   children: ReactNode;
+  modal: ReactNode;
 }
 
-export const App = ({ children }: AppProps) => (
-  <html lang="en">
+export const App = ({ children, modal }: AppProps) => (
+  <html lang="en" className="h-full">
     <body
-      className={`font-sans ${font} flex flex-col gap-4 bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white`}
+      className={`h-full font-sans ${font} flex flex-col gap-4 bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white`}
     >
       <NextSSRPlugin
         /**
@@ -34,6 +35,8 @@ export const App = ({ children }: AppProps) => (
       />
       <TopNav />
       {children}
+      {modal}
+      <div id="modal-root" />
     </body>
   </html>
 );
