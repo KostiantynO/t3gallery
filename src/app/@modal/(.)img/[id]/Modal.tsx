@@ -34,7 +34,7 @@ export const Modal = ({ children }: ModalProps) => {
   return createPortal(
     <dialog
       ref={dialogRef}
-      className="m-0 h-screen w-screen bg-zinc-900/50"
+      className="m-0 h-screen w-screen bg-black/90"
       onClose={onDismiss}
     >
       {children}

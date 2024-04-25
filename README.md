@@ -52,7 +52,7 @@ Follow our deployment guides for
 - [x] Add `taint` (server-only)
 - [x] Use Next/`Image` component
 - [x] Add `error management` (Sentry)
-- [ ] Add `routing`/`Image page` (parallel route)
+- [x] Add `routing`/`Image page` (parallel route)
 - [ ] Add `Delete button` (Server Actions)
 - [ ] Add `analytics` (Posthog)
 - [ ] Add `rate limiting` (Upstash)
