@@ -20,7 +20,7 @@ const Gallery = async () => {
 };
 
 const GalleryPage = async () => (
-  <main className="mx-auto flex min-h-screen max-w-5xl flex-col items-center px-8">
+  <main className="mx-auto flex max-w-5xl flex-col items-center px-8">
     <SignedOut>
       <p className="h-full w-full text-center text-2xl">Please sign in above</p>
     </SignedOut>

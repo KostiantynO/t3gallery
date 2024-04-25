@@ -9,5 +9,15 @@ export const FullPageImageView = async ({
 }: FullPageImageViewProps) => {
   const { url, name } = await getImage(photoId);
 
-  return <img src={url} alt={name} className="w-96" />;
+  return (
+    <div className="flex h-full w-full min-w-0 text-white">
+      <div className="flex-shrink flex justify-center items-center">
+        <img src={url} alt={name} className="flex-shrink object-contain" />
+      </div>
+
+      <div className="flex w-48 flex-col flex-shrink-0 border-l">
+        <div className="text-sm font-bold">{name}</div>
+      </div>
+    </div>
+  );
 };
