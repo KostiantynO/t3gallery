@@ -20,9 +20,9 @@ interface AppProps {
 }
 
 export const App = ({ children, modal }: AppProps) => (
-  <html lang="en" className="h-full">
+  <html lang="en" className="">
     <body
-      className={`h-full font-sans ${font} flex flex-col gap-4 bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white`}
+      className={`font-sans ${font} bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white`}
     >
       <NextSSRPlugin
         /**
@@ -33,8 +33,12 @@ export const App = ({ children, modal }: AppProps) => (
          */
         routerConfig={extractRouterConfig(ourFileRouter)}
       />
-      <TopNav />
-      {children}
+
+      <div className="grid h-screen grid-rows-[auto,1fr]">
+        <TopNav />
+        <main className="overflow-y-scroll">{children}</main>
+      </div>
+
       {modal}
       <div id="modal-root" />
     </body>

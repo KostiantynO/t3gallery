@@ -16,7 +16,9 @@ const Gallery = async () => {
     </li>
   ));
 
-  return <ul className="grid auto-cols-auto grid-cols-3 gap-4">{gallery}</ul>;
+  return (
+    <ul className="grid auto-cols-auto grid-cols-3 gap-4 py-4">{gallery}</ul>
+  );
 };
 
 const GalleryPage = async () => (
