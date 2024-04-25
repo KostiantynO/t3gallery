@@ -60,6 +60,33 @@ pa server-only
 pa @sentry/wizard@latest
 pn list --depth 0
 pn sentry-wizard
+Running Sentry Wizard... # version: 3.22.0 | sentry-cli version: 1.77.3
+# Sentry Wizard will help you to configure your project Thank you for using Sentry :)
+? What platform do you want to set up? # Next.js
+# Skipping connection to Sentry due files already patched
+┌   Sentry Next.js Wizard # Version: 3.22.0
+◇  Are you using Sentry SaaS or self-hosted Sentry? # Sentry SaaS (sentry.io)
+◇  Do you already have a Sentry account? # Yes
+◇  Login complete.
+◇  Select your Sentry project. # kostiantyn-ochenash/t3-gallery-video
+# ◇  Installed @sentry/nextjs@^7.105.0 with PNPM.
+◇  Do you want to route Sentry requests in the browser through your NextJS server to avoid ad blockers? # Yes
+◆  Created fresh sentry.server.config.ts, sentry.client.config.ts, sentry.edge.config.ts│
+◆  Added Sentry configuration to next.config.js.
+◆  Created `src/app/global-error.jsx`.
+◇  Do you want to create an example page `/sentry-example-page` to test your Sentry setup? # Yes
+◆  Created `src/app/sentry-example-page/page.jsx`
+◆  Created `src/app/api/sentry-example-api/route.js`
+◆  Added auth token to `.sentryclirc` to test uploading source maps locally.
+◆  Created `.sentryclirc`, and added to `.gitignore`.│
+◇  Are you using a CI/CD tool to build and deploy your application? # Yes
+◇  Add the Sentry authentication token as an environment variable to your CI setup:
+    SENTRY_AUTH_TOKEN="xxx"
+◇  Did you configure CI as shown above? # Yes, continue!
+Successfully installed the Sentry Next.js SDK!
+visit `/sentry-example-page`
+[issues](https://github.com/getsentry/sentry-javascript/issues)
+#🎉  Successfully set up Sentry for your project 🎉
 ```
 
 `.eslintrc.cjs`

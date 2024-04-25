@@ -51,7 +51,7 @@ Follow our deployment guides for
 - [x] Add `image upload`
 - [x] Add `taint` (server-only)
 - [x] Use Next/`Image` component
-- [ ] Add `error management` (Sentry)
+- [x] Add `error management` (Sentry)
 - [ ] Add `routing`/`Image page` (parallel route)
 - [ ] Add `Delete button` (Server Actions)
 - [ ] Add `analytics` (Posthog)
