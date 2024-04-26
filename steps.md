@@ -87,6 +87,9 @@ Successfully installed the Sentry Next.js SDK!
 visit `/sentry-example-page`
 [issues](https://github.com/getsentry/sentry-javascript/issues)
 #🎉  Successfully set up Sentry for your project 🎉
+
+
+
 ```
 
 `.eslintrc.cjs`

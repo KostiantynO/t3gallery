@@ -1,33 +1,20 @@
 'use client';
 import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
-import { useRouter } from 'next/navigation';
-import { useCallback } from 'react';
 
-import { UploadButton } from '~/parts/uploadthing';
+import { SimpleUploadButton } from './SimpleUploadButton';
 
-export const AuthIndicator = () => {
-  const router = useRouter();
+export const AuthIndicator = () => (
+  <div className="flex items-center gap-4">
+    <SignedOut>
+      <SignInButton />
+    </SignedOut>
 
-  const onUploadDone = useCallback(() => {
-    router.refresh();
-  }, [router]);
+    <SignedIn>
+      <SimpleUploadButton />
 
-  return (
-    <div className="flex">
-      <SignedOut>
-        <SignInButton />
-      </SignedOut>
-
-      <SignedIn>
-        <UploadButton
-          endpoint="imageUploader"
-          onClientUploadComplete={onUploadDone}
-        />
-
-        <div className="min-w-7">
-          <UserButton />
-        </div>
-      </SignedIn>
-    </div>
-  );
-};
+      <div className="min-w-7">
+        <UserButton />
+      </div>
+    </SignedIn>
+  </div>
+);
