@@ -22,7 +22,7 @@ interface AppProps {
 export const App = ({ children, modal }: AppProps) => (
   <html lang="en" className="">
     <body
-      className={`font-sans ${font} bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white`}
+      className={`bg-background text-foreground bg-gradient-to-b from-[#2e026d] to-[#15162c] font-sans ${font}`}
     >
       <NextSSRPlugin
         /**

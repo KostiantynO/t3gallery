@@ -88,6 +88,8 @@ visit `/sentry-example-page`
 [issues](https://github.com/getsentry/sentry-javascript/issues)
 #🎉  Successfully set up Sentry for your project 🎉
 
+pnpm dlx shadcn-ui@latest init
+
 
 
 ```
